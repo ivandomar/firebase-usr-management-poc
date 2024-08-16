@@ -16,8 +16,9 @@ const SignController = {
                 await DataStorageService.store('Users',  { email: req.email });
             }
 
+            return res.status(201).send();
         } catch (error) {
-            console.error(error);
+            return res.status(422).json(error);
         }
     },
 };
