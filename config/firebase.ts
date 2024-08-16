@@ -1,4 +1,5 @@
 import { initializeApp } from 'firebase/app';
+import { getAuth } from 'firebase/auth';
 
 import loader from './utils/loader';
 
@@ -14,5 +15,9 @@ const firebaseConfig = {
 };
 
 const fireabseApp = initializeApp(firebaseConfig);
+
+const firebaseAuth = getAuth(fireabseApp);
+
+export { firebaseAuth };
 
 export default fireabseApp;
