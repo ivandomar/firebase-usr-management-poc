@@ -1,5 +1,6 @@
 import { initializeApp } from 'firebase/app';
 import { getAuth } from 'firebase/auth';
+import { getFirestore } from 'firebase/firestore';
 
 import loader from './utils/loader';
 import { exit } from 'process';
@@ -19,6 +20,8 @@ const fireabseApp = initializeApp(firebaseConfig);
 
 const firebaseAuth = getAuth(fireabseApp);
 
-export { firebaseAuth };
+const firestore = getFirestore(fireabseApp);
+
+export { firebaseAuth, firestore };
 
 export default fireabseApp;
