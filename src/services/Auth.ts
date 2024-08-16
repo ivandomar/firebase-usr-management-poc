@@ -2,8 +2,8 @@ import { createUserWithEmailAndPassword } from 'firebase/auth';
 
 import { firebaseAuth } from '../../config/firebase';
 
-const firebaseService = {
+const AuthService = {
     signup: (email: string, password: string) => createUserWithEmailAndPassword(firebaseAuth, email, password),
 };
 
-export default firebaseService;
+export default AuthService;
