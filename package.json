@@ -2,9 +2,11 @@
   "name": "firebase-usr-managemnt-poc",
   "version": "1.0.0",
   "description": "PoC of a basic signup/in firebase flow",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npx tsc",
+    "start": "node dist/index.js",
+    "dev": "nodemon index.ts"
   },
   "repository": {
     "type": "git",
@@ -20,5 +22,16 @@
   "bugs": {
     "url": "https://github.com/ivandomar/firebase-usr-management-poc/issues"
   },
-  "homepage": "https://github.com/ivandomar/firebase-usr-management-poc#readme"
+  "homepage": "https://github.com/ivandomar/firebase-usr-management-poc#readme",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.3.0",
+    "nodemon": "^3.1.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
+  }
 }
