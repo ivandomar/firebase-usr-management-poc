@@ -1,9 +1,4 @@
-import dotenv from 'dotenv';
+import server from "./server";
+import fireabse from "./firebase";
 
-dotenv.config();
-
-const port = parseInt(process.env.PORT || '3000');
-
-const config = { port };
-
-export default config;
+export default { server, fireabse };
